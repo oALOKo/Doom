@@ -5,7 +5,7 @@ import {
     getDocs,
     serverTimestamp,
     addDoc,
-    onSnapshot //adds a realtime listener
+    onSnapshot //addition of realtime listener
 } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js'
 
 const firebaseConfig = {
@@ -27,14 +27,13 @@ const db = getFirestore(); //our database is stored here
 const colRef = collection(db,'Score');
 let leaderboardData = [];
 
-    // Function to populate the leaderboard
-    function populateLeaderboard() {
+    // making leaderboard
+    function Leaderboard() {
       const leaderboardBody = document.getElementById("leaderboardBody");
 
       // Clear existing rows
       leaderboardBody.innerHTML = "";
 
-      // Populate the leaderboard
       for (let i = 0; i < leaderboardData.length; i++) {
         let row = leaderboardBody.insertRow(i);
         let rankCell = row.insertCell(0);
@@ -68,5 +67,5 @@ let leaderboardData = [];
             i++;
         })
         console.log(leaderboardData);
-        populateLeaderboard();
+        Leaderboard();
     })
