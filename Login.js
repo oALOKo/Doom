@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })   
     .catch((err)=>{
         console.log(err);
+        
     })
   }
   
@@ -90,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
           })
       })
       .catch((err)=>{
-          console.log(err)
+        alert('maybe password is less than 6 characters')
       })
   
   
