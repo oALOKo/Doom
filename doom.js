@@ -48,7 +48,7 @@ setTimeout(()=>{
     console.log("Score saved")
     })
 
-    const redirectTo = 'https://oaloko.github.io/Leaderboards/'
+    const redirectTo = './LeaderBoards.html?username=' + encodeURIComponent(decodedUsername);
         setTimeout(() => {
           window.location.replace(redirectTo); 
       },3000);   
